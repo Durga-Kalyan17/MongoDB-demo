@@ -3,6 +3,11 @@ package com.mongodbdemo.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 /**
  * @author DurgaKalyan
  * 
@@ -57,8 +62,12 @@ public class Player {
 	
 	@Id
 	private int id;
+	@NotBlank
 	private String name;
+	@NotBlank
 	private String role;
+	
 	private int jerseyNumber;
+	@NotNull
 	private String country;
 }
